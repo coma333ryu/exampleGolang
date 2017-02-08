@@ -117,7 +117,7 @@ func main() {
 	for index, name := range names {
 		println(index, name)
 	}
-	//index가 필요 없을시 _문을 사용하여 무시할 수 있음.
+	//index가 필요 없을시 _(공백 식별자)를 사용하여 무시할 수 있음.
 	for _, name := range names {
 		println(name)
 	}

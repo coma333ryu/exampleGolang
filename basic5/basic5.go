@@ -18,4 +18,6 @@ func main() {
 	anotherNext := nextValue()
 	println(anotherNext()) // 1 다시 시작
 	println(anotherNext()) // 2
+
+	println(next()) // 4
 }

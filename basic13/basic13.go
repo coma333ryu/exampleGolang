@@ -31,7 +31,7 @@ func main() {
 	var input string
 	fmt.Scanln(&input)
 
-	/*
+	/*	goroutine 실행 동기화를 위해 채널을 사용한 예
 		done := make(chan bool)
 		go func() {
 			for i := 0; i < 10; i++ {

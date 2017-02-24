@@ -31,10 +31,12 @@ func main() {
 	println(<-ch2)
 
 	//채널 수신시 return값은 채널 메세지와, 닫힘여부(true/false)이다.
-	_, success := <-ch2
-
-	if !success {
+	if _, success := <-ch2; !success {
 		println("더이상 데이타 없음.")
 	}
 
+	//채널값을 가져올 때 range문 사용가능.
+	// for channelMsg := range ch2 {
+	// 	println(channelMsg)
+	// }
 }

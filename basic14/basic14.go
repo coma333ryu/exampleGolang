@@ -16,4 +16,25 @@ func main() {
 	ch <- 101
 
 	fmt.Println(<-ch)
+
+	ch2 := make(chan int, 2)
+
+	// 채널에 송신
+	ch2 <- 1
+	ch2 <- 2
+
+	// 채널을 닫는다
+	close(ch2)
+
+	// 채널 수신
+	println(<-ch2)
+	println(<-ch2)
+
+	//채널 수신시 return값은 채널 메세지와, 닫힘여부(true/false)이다.
+	_, success := <-ch2
+
+	if !success {
+		println("더이상 데이타 없음.")
+	}
+
 }

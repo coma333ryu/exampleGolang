@@ -13,8 +13,13 @@ type rect struct {
 	width, height int
 }
 
+//person 생성자
+func ㅜnewPerson(newName string, newAge int) *person {
+	return &person{name: newName, age: newAge}
+}
+
 //golang용 메서드 value receiver
-//reat가 복사되어 전달된다.
+//rect가 복사되어 전달된다.
 func (r rect) area() int {
 	r.width = 20
 	return r.width * r.height
@@ -49,6 +54,7 @@ func main() {
 	//new를 이용하여 struct생성하면 반환되는 struct는 포인터값(*person)이 된다.
 	thirdPerson := new(person)
 	forthPerson := person{"Forth Person", 14}
+	newPerson := ㅜnewPerson("New Person", 40)
 
 	//person에 필드값 할당
 	firstPerson.name = "First Person"
@@ -60,10 +66,11 @@ func main() {
 	fmt.Println("firstPerson", firstPerson)
 	fmt.Println("secondPerson", secondPerson)
 	fmt.Println("thirdPerson", *thirdPerson)
-
-	newPerson := changePersonVal(forthPerson)
-	fmt.Println("forthPerson 111====>", forthPerson)
 	fmt.Println("newPerson", newPerson)
+
+	newPerson1 := changePersonVal(forthPerson)
+	fmt.Println("forthPerson 111====>", forthPerson)
+	fmt.Println("newPerson1", newPerson1)
 
 	newPerson2 := changePersonVal2(&forthPerson)
 	fmt.Println("newPerson2", newPerson2)

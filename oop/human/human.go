@@ -10,16 +10,16 @@ type Human struct {
 }
 
 //NewHuman : Human struct 생성자
-func NewHuman(name string, age int, sex bool) Human {
-	return Human{name: name, age: age, sex: sex}
+func NewHuman(name string, age int, sex bool) *Human {
+	return &Human{name: name, age: age, sex: sex}
 }
 
-//Move method 구현
-func (human *Human) Move(humanName string) {
-	fmt.Printf("%q is moving \n", humanName)
+//Move method
+func (human *Human) Move() {
+	fmt.Printf("%q is moving \n", human.name)
 }
 
-//Communicate method 구현
+//Communicate method
 func (human *Human) Communicate() {
-	fmt.Println("Human is communicating")
+	fmt.Printf("%q is communicating \n", human.name)
 }

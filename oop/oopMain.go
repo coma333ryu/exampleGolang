@@ -7,11 +7,14 @@ import (
 )
 
 func main() {
-	human1 := human.NewHuman("Human", 10, true)
-	fmt.Println(human1)
+	human := human.NewHuman("Human", 10, true)
+	fmt.Println(human)
+	human.Move()
+	human.Communicate()
 
 	tom := tom.NewTom("Tom", 20, true)
 	fmt.Println("Tom", tom)
 	fmt.Println("Tom's Total Money is ", tom.GetTotalMoney(10, 100))
-	// tom.
+	tom.Move()
+	tom.Communicate()
 }

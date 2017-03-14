@@ -26,13 +26,13 @@ func (tom *Tom) work(time int, money int) {
 
 }
 
-//Move : Humna의 Move 메소드 오버로딩
+//Move : Humna의 Move 메소드 오버라이딩
 func (tom *Tom) Move() {
 	tom.humanTom.Move()
 	fmt.Println("Tom is moving!!!")
 }
 
-//Communicate : Humna의 Communicate 메소드 오버로딩
+//Communicate : Humna의 Communicate 메소드 오버라이딩
 func (tom *Tom) Communicate() {
 	tom.humanTom.Communicate()
 	fmt.Println("Tom is communicating!!!")

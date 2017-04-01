@@ -9,8 +9,8 @@ import (
 )
 
 type TemplateData struct {
-	Title string
-	Name  string
+	title string
+	name  string
 }
 
 var rootDir, _ = os.Getwd()

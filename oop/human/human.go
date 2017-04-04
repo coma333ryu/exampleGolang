@@ -6,7 +6,7 @@ import "fmt"
 type Human struct {
 	name string
 	age  int
-	sex  bool
+	sex  bool //true : men, false : women
 }
 
 //NewHuman : Human struct 생성자

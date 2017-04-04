@@ -1,3 +1,6 @@
+/*
+package tom 은 human을 상속받은 tom에 관한 struct들과 메소드들의 패키지임.
+*/
 package tom
 
 import (

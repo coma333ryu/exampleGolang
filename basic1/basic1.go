@@ -19,6 +19,8 @@ const (
 	Apple  = iota // 0
 	Grape         // 1
 	Orange        // 2
+	Green  = 10
+	Red    = iota
 )
 
 func main() {
@@ -37,6 +39,8 @@ func main() {
 
 	fmt.Println("Apple", Apple)
 	fmt.Println("Grape", Grape)
+	fmt.Println("Green", Green)
+	fmt.Println("Red", Red)
 
 	rawLiteral := `aaaaa\n 
     bbbb\n 

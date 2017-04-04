@@ -14,7 +14,7 @@ func secondStart() {
 }
 
 func thirdStart() {
-	defer fmt.Println("Third End Function")
+	// defer fmt.Println("Third End Function")
 	fmt.Println("Third Start Function")
 }
 
@@ -39,7 +39,7 @@ func openFile(fn string) {
 func main() {
 	thirdStart()
 	//특정 문장 혹은 함수를 나중에 (defer를 호출하는 함수가 리턴하기 직전에) 실행
-	defer secondStart()
+	// defer secondStart()
 	firstStart()
 
 	openFile("Invalid.txt")

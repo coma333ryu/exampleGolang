@@ -23,12 +23,6 @@ func NewTom(name string, age int, sex bool) *Tom {
 	}
 }
 
-func (tom *Tom) work(time int, money int) {
-	tom.total = time * money
-	fmt.Println("Tom is working")
-
-}
-
 //Move : Humna의 Move 메소드 오버라이딩
 func (tom *Tom) Move() {
 	tom.humanTom.Move()
@@ -43,6 +37,6 @@ func (tom *Tom) Communicate() {
 
 //GetTotalMoney :
 func (tom *Tom) GetTotalMoney(time int, money int) int {
-	tom.work(time, money)
+	tom.total = time * money
 	return tom.total
 }
